@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cờ Việt Nam</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <canvas id="flagCanvas"></canvas>
+    <br>
+    <button id="startButton">Bắt đầu</button>
+    <button id="resetButton">Quay lại</button>
     <script>
         const canvas = document.getElementById("flagCanvas");
         canvas.width = 500;
         canvas.height = 300;
         const ctx = canvas.getContext("2d");
 
-        // Vẽ nền cờ (màu đỏ)
-        ctx.fillStyle = "red";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        // Hàm vẽ nền cờ (màu đỏ)
+        function drawFlag() {
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Vẽ ngôi sao vàng
+            // Vẽ ngôi sao vàng
+            drawStar(canvas.width / 2, canvas.height / 2, 5, 60, 25);
+        }
+
+        // Hàm vẽ ngôi sao vàng
         function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
             let rot = (Math.PI / 2) * 3;
             let x = cx;
@@ -43,8 +72,16 @@
             ctx.fill();
         }
 
-        // Vẽ ngôi sao ở trung tâm cờ
-        drawStar(canvas.width / 2, canvas.height / 2, 5, 60, 25);
+        // Hàm xóa canvas
+        function resetCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Gắn sự kiện cho nút "Bắt đầu"
+        document.getElementById("startButton").addEventListener("click", drawFlag);
+
+        // Gắn sự kiện cho nút "Quay lại"
+        document.getElementById("resetButton").addEventListener("click", resetCanvas);
     </script>
 </body>
 </html>
