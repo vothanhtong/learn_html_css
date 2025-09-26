@@ -2,58 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 3 Võ Thanh Tòng</title>
+    <meta name="viewport" content="width=900, initial-scale=1.0">
+    <title>Bai 3 Võ Thanh Tòng</title>
     <meta name="author" content="Võ Thanh Tòng">
     <style>
         body {
             margin: 0;
-            font-family:'Segoe UI',Arial,sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background: #f8f8f8;
         }
         .container {
             display: flex;
-            width:700px;
-            height:400px;
-            margin:40px auto;
-            box-shadow:0 0 20px #ddd;
-            border-radius:20px;
-            overflow: hidden;
+            width: 900px;
+            height: 500px;
+            margin: 40px auto;
             background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #ddd;
+            overflow: hidden;
         }
         .welcome-section {
-            flex:1;
-            background: #715cf6;
+            flex: 1;
+            background: #7c5dfa;
             color: #fff;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            border-top-left-radius:20px;
-            border-bottom-left-radius:200px;
+            border-top-left-radius:0;
+            border-bottom-left-radius:0;
+            border-top-right-radius:120px;
+            border-bottom-right-radius:120px;
+            height: 100%;
         }
         .welcome-section h2 {
+            font-size: 2.2em;
             margin-bottom: 10px;
-            font-size:2em;
+            font-weight: 600;
         }
         .welcome-section p {
-            margin-bottom:20px;
+            margin-bottom: 30px;
+            font-size: 1.15em;
         }
-        .register-btn, .back-btn {
-            padding:10px 30px;
+        .register-btn {
+            padding: 12px 32px;
             background: transparent;
             color: #fff;
-            border:2px solid #fff;
-            border-radius:8px;
+            border: 2px solid #fff;
+            border-radius: 8px;
             font-size: 1em;
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
-            display: none;
-            margin-top: 10px;
         }
-        .register-btn:hover, .back-btn:hover {
+        .register-btn:hover {
             background: #fff;
-            color: #715cf6;
+            color: #7c5dfa;
         }
         .login-section {
             flex: 1;
@@ -64,91 +67,69 @@
             background: #fff;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
+            height: 100%;
         }
         .login-section h2 {
-            margin-bottom:20px;
+            margin-bottom: 30px;
             color: #222;
-            transition: color 0.2s, font-size 0.2s, text-shadow 0.2s;
-        }
-        .login-section h2:hover {
-            color: #715cf6;
-            cursor:pointer;
-            font-size: 2.5em;
-            text-shadow: 0 2px 8px #d1d1ff;
+            font-size: 2.2em;
+            font-weight: 600;
         }
         .login-section form {
-            width:80%;
+            width: 80%;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
         }
         .login-section input {
-            padding:10px;
-            border-radius: 6px;
+            padding: 12px;
+            border-radius: 8px;
             border: none;
             background: #e3e6ea;
-            font-size:1em;
+            font-size: 1em;
         }
         .forgot {
-            font-size: 0.95em;
+            font-size: 1em;
             color: #222;
             text-decoration: none;
             margin-bottom: 10px;
             cursor: pointer;
         }
         .login-btn {
-            padding: 10px;
-            background: #715cf6;
+            padding: 14px;
+            background: #7c5dfa;
             color: #fff;
             border: none;
-            border-radius: 6px;
-            font-size: 1em;
+            border-radius: 8px;
+            font-size: 1.1em;
             cursor: pointer;
             font-weight: bold;
+            margin-top: 10px;
             transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
         }
         .login-btn:hover {
             background: #5a47c2;
-            transform: scale(1.05);
+            transform: scale(1.04);
             box-shadow: 0 4px 12px #181845;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class=" welcome-section">
+        <div class="welcome-section">
             <h2>Hello, Welcome!</h2>
             <p>Don't have on account</p>
-            <button class="register-btn" id="registerBtn">Registration</button>
-            <button class="back-btn" id="backBtn">Quay lại</button>
+            <button class="register-btn">Registration</button>
         </div>
-        <div class=" login-section">
+        <div class="login-section">
             <h2>Login</h2>
-            <form id="loginForm">
+            <form>
                 <input type="text" placeholder="Username" required>
                 <input type="password" placeholder="Password" required>
-                <a href="#" class="forgot" id="forgotLink">Forgot Password!</a>
+                <a href="#" class="forgot">Forgot Password!</a>
                 <button type="submit" class="login-btn">Login</button>
             </form>
         </div>
     </div>
-    <script>
-        document.getElementById( 'forgotLink').onclick = function(e) {
-            e.preventDefault();
-            document.getElementById('loginForm').style.display = 'none';
-            document.getElementById('registerBtn').style.display = 'block';
-            document.getElementById('backBtn').style.display = 'block';
-        };
-        document.getElementById('backBtn').onclick = function(e) {
-            e.preventDefault();
-            document.getElementById('loginForm').style.display = 'block';
-            document.getElementById('registerBtn').style.display = 'none';
-            document.getElementById('backBtn').style.display = 'none';
-        };
-        document.getElementById('registerBtn').onclick = function(e) {
-            e.preventDefault();
-            alert('Chức năng đăng ký sẽ được bổ sung!');
-        };
-    </script>
 </body>
 </html>
