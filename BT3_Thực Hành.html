@@ -35,29 +35,34 @@
             border-bottom-right-radius:120px;
             height: 100%;
         }
-        .welcome-section h2 {
+        .welcome-section-h2 {
             font-size:2.2em;
             margin-bottom: 10px;
             font-weight:600;
         }
-        .welcome-section p {
+        .welcome-section-p {
             margin-bottom:30px;
             font-size: 1.15em;
         }
-        .register-dăng-ký{
-            padding: 12px 32px;
-            background:transparent;
-            color: #fff;
-            border: 2px solid #fff;
-            border-radius: 8px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }
-        .register-dăng-ký:hover {
-            background: #fff;
-            color: #7c5dfa;
-        }
+        .register-dk {
+           padding: 14px 40px;         
+           background: transparent;
+           color: #fff;
+           border: 1px solid #fff;     
+           border-radius: 9px;
+           font-size: 1.2em;           
+           cursor: pointer;
+           font-weight: bold;
+           transition: all 0.3s ease;
+       }
+
+        .register-dk:hover {
+           background-color: #fff;     
+           color: #7c5dfa;             
+           transform: scale(1.1);     
+           box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+       }
+
         .login-section {
             flex: 1;
             display: flex;
@@ -107,10 +112,10 @@
             margin-top: 10px;
             transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
         }
-        .login-btn:hover {
+        .login-dăng-ky:hover {
             background: #5a47c2;
             transform: scale(1.04);
-            box-shadow: 0 4px 12px #181845;
+            box-shadow:0 4px 12px #181845;
         }
     </style>
 </head>
@@ -119,7 +124,7 @@
         <div class="welcome-section">
             <h2>Hello,Welcome!</h2>
             <p>Don't have on account</p>
-            <button class="register-btn">Registration</button>
+            <button class="register-dk">Registration</button>
         </div>
         <div class="login-section">
             <h2>Login</h2>
