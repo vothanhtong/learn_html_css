@@ -1,140 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"content="width=900, initial-scale=1.0">
-    <title>Bai 3 Võ Thanh Tòng</title>
-    <meta name="author"content="Võ Thanh Tòng">
-    <style>
-        body {
-            margin:0;
-            font-family:'Segoe UI', Arial, sans-serif;
-            background: #f8f8f8;
-        }
-        .container {
-            display: flex;
-            width: 900px;
-            height:500px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 0 20px #ddd;
-            overflow:hidden;
-        }
-        .welcome-section {
-            flex: 1;
-            background: #7c5dfa;
-            color: #fff;
-            display: flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            border-top-left-radius:0;
-            border-bottom-left-radius:0;
-            border-top-right-radius:120px;
-            border-bottom-right-radius:120px;
-            height: 100%;
-        }
-        .welcome-section-h2 {
-            font-size:2.2em;
-            margin-bottom: 10px;
-            font-weight:600;
-        }
-        .welcome-section-p {
-            margin-bottom:30px;
-            font-size: 1.15em;
-        }
-        .register-dk {
-           padding: 14px 40px;         
-           background: transparent;
-           color: #fff;
-           border: 1px solid #fff;     
-           border-radius: 9px;
-           font-size: 1.2em;           
-           cursor: pointer;
-           font-weight: bold;
-           transition: all 0.3s ease;
-       }
-
-        .register-dk:hover {
-           background-color: #fff;     
-           color: #7c5dfa;             
-           transform: scale(1.1);     
-           box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-       }
-
-        .login-section {
-            flex: 1;
-            display: flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            background: #fff;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            height: 100%;
-        }
-        .login-section h2 {
-            margin-bottom:30px;
-            color: #222;
-            font-size: 2.2em;
-            font-weight: 600;
-        }
-        .login-section form {
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-        .login-section input {
-            padding: 12px;
-            border-radius: 8px;
-            border: none;
-            background: #e3e6ea;
-            font-size: 1em;
-        }
-        .forgot {
-            font-size: 1em;
-            color: #222;
-            text-decoration: none;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        .login-btn {
-            padding: 14px;
-            background: #7c5dfa;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-        }
-        .login-dăng-ky:hover {
-            background: #5a47c2;
-            transform: scale(1.04);
-            box-shadow:0 4px 12px #181845;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Bài 3 Võ Thanh Tòng</title>
+  <meta name="author" content="Võ Thanh Tòng">
+  <style>
+    td{
+        padding: 5px;
+        vertical-align: middle;
+    }
+    .left-cell {
+    background: #7c5dfa;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="welcome-section">
-            <h2>Hello,Welcome!</h2>
-            <p>Don't have on account</p>
-            <button class="register-dk">Registration</button>
-        </div>
-        <div class="login-section">
-            <h2>Login</h2>
-            <form>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <a href="#" class="forgot">Forgot Password!</a>
-                <button type="submit" class="login-btn">Login</button>
-            </form>
-        </div>
-    </div>
+  <table border="1" width="900" height="500" align="center">
+    <tr>
+      <td class="left-cell" align="center" bgcolor="#7c5dfa" width="50%">
+        <h2 style="color:white;font-size: 50px">Hello, Welcome!</h2>
+        <p style="color:white;font-size: 30px">Don't have an account?</p>
+        <form>
+          <input type="button" value="Registration" style="font-size:25px; display:block; margin:auto;">
+        </form>
+      </td>
+      <td align="center" width="50%">
+        <h2 style="font-size: 50px">Login</h2>
+        <form>
+          <table cellpadding="10">
+            <tr>
+              <td style="font-size: 30px"> Username:</td>
+              <td><input type="text" name="username" required 
+                style="font-size:15px; padding:10px; width:250px;"></td>
+            </tr>
+            <tr>
+              <td style="font-size: 30px">Password:</td>
+              <td><input type="password" name="password" required
+                style="font-size:15px; padding:10px; width:250px;"></td>
+            </tr>
+            <tr>
+              <td colspan="5" align="center">
+                <a style="font-size: 25px" href="#">Forgot Password!</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" align="center">
+                <input type="submit" value="Login" style="font-size:20px; padding:5px 25px;">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
