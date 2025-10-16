@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Lab2-Võ Thanh Tòng "
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "learn_html_css"
+	}
+}
