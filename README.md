@@ -11,5 +11,3 @@ Bai 3. Thiết kế form đăng nhập theo mẫu
 
 Bài 4. Thiết kế web tin tức (các em tự lấy ảnh tùy thích)
 ![alt text](image-5.png)
-
-Thực Hành Lap 3: ![alt text](image.png)
