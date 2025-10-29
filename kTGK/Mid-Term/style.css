@@ -1,0 +1,212 @@
+body {
+  font-family: Poppins, Arial, system-ui;
+  margin: 0;
+  padding: 0;
+}
+.frame {
+  width: 1100px;          
+  height: 100%;         
+  margin: 60px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.left-panel {
+  width: 470px;
+  padding: 60px 20px 0 40px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.white-shape {
+  position: absolute;
+  left: 0; top: 0;
+  width: 550px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.left-inner {position: relative; z-index: 2;}
+.back {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.item-title {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+}
+.product-name {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 6px;
+  color: rgb(164, 164, 164);
+}
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #222;
+}
+.watch-wrap {
+  margin-top: 30px;
+  width: 240px;
+  text-align: center;
+}
+.watch-wrap img {
+  width: 100%; height: auto;
+}
+
+
+.dots {
+  margin-top: 30px;
+  display: flex; gap: 8px;
+  justify-content: center;
+  opacity: 0.5;
+}
+.dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent; 
+  display: inline-block;
+  border: 1.5px solid #ddd;
+}
+
+.dots span:first-child {
+  background-color: gray;
+}
+
+
+.right-panel {
+  flex: 1;
+  padding: 40px 80px 0 40px;
+  color: #fff;
+  position: relative;
+}
+
+.right-panel .input {
+  color: #fff;      
+  background: transparent;
+  border-bottom: 1.5px solid rgba(255,255,255,0.5);
+  caret-color: #fff;  
+}
+
+
+.payment-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.card-mock {
+  width: 420px;
+  height: 220px;
+  border-radius: 18px;
+  padding: 24px 28px;
+  background: linear-gradient(180deg, #fff6, #fff3);
+  border: none;
+  /* Gradient shadow */
+  box-shadow: 15px 19px 25px #00000005;
+  position: relative;
+  margin-bottom: 32px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-number {
+  font-size: 26px;
+  font-weight: 400;
+  width: 420px;
+  letter-spacing: 4px;
+  max-width: 420px;
+  margin-bottom: 12px;
+}
+.card-meta {
+  display: flex;
+  width: 420px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.owner, .meta-left,
+.meta-right div {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 10px;
+}
+.meta-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.meta-right-value {
+  font-size: 23px;
+  font-weight: 400;
+}
+label {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #333;
+  display: block;
+}
+.input {
+  font-size: 20px;
+  font-weight: 400;
+  background: transparent;
+  color: #222;
+  border: none;
+  border-bottom: 2px solid #2226;
+  padding: 10px 4px;
+  margin-bottom: 18px;
+  width: 100%;
+  outline: none;
+}
+.row {display: flex; gap: 18px;}
+.half {flex:1;}
+.save-row {
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  display: flex; align-items: center; gap: 8px;
+}
+.total-row {
+  display: flex; align-items: center; gap: 20px;
+  margin: 16px;
+}
+.total, .purchase {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 20px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+ .total {
+  background: #000;
+  color: #fff;
+} 
+.purchase {
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}

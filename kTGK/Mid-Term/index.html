@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Payment UI — exact clone</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="frame">
+  <svg class="white-shape" viewBox="0 0 600 900" preserveAspectRatio="none"><path d="M0,0 L420,0 C520,0 520,160 420,210 C320,260 320,360 260,560 C200,760 120,840 0,900 L0,0 Z" fill="#fff"/></svg>
+  <div class="left-panel">
+    <div class="left-inner">
+      <div class="back"><img src="ArrowLeft.png" alt="back"> Back</div>
+      <div class="item-title">Item 1 of 3</div>
+      <div class="product-name">CORNAVIN Lady's wrist watch</div>
+      <div class="price">$262.00</div>
+      <div class="watch-wrap"><img src="clock.png" alt="watch"></div>
+      <div class="dots"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="payment-title">Payment Details</div>
+    <div class="card-mock">
+        <div style="display:flex;justify-content:flex-end;align-items:center;margin-bottom:12px;">
+            <img src="logo-visa.png" class="visa" alt="visa">
+        </div>
+        <div class="chip" style="margin-bottom: 20px;">
+            <img src="chip.png" alt="chip">
+        </div>
+      <div class="card-number">5790 2533 6570 3631</div>
+      <div class="card-meta">
+        <div class="owner">Owner Name<br><span class="meta-right-value">Anne</span></div>
+        <div class="meta-right">
+          <div>Expiry<br><span class="meta-right-value">06/27</span></div>
+          <div>CVV<br><span class="meta-right-value">262</span></div>
+        </div>
+      </div>
+    </div>
+    <form class="form">
+      <label>CARD HOLDER NAME</label>
+      <input class="input" value="Anne Jenny">
+      <label>CARD NUMBER</label>
+      <input class="input" value="5790 2533 6570 3631">
+      <div class="row">
+        <div class="half">
+          <label>EXP DATE</label>
+          <input class="input" value="06/27">
+        </div>
+        <div class="half">
+          <label>CVV</label>
+          <input class="input" value="262">
+        </div>
+      </div>
+      <div class="save-row">
+        <input type="checkbox" id="save" checked>
+        <label for="save" style="margin-left:2px;">Save Card Details</label>
+      </div>
+      <div class="total-row">
+        <div class="total">Total: $727.00</div>
+        <button class="purchase">PURCHASE</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
