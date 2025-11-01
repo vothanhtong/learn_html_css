@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoạn văn chào mừng</title>
+    
+</head>
+<body>
+    <h1>Đơn gia nhập hội fam đội tuyển bóng đá VIỆT NAM</h1><br>
+    <p><b>Chào mừng đã đến với chúng tôi</b></p><br>
+    <p>Hãy điền thông tin bên dưới để gia nhập hội fam đội tuyển bóng đá VIỆT NAM</p>
+    <form>
+        <label for="fullname"> Nhập họ và tên</label><br><br>
+        <input type="text" id="fullname" name="nhập họ và tên" placeholder="VD: vò thanh tòng" required size="30"><br><br>
+        <!-- input là khung đẻ nhập vào -->
+         <label for="email"> Nhập email của bạn</label><br><br>
+        <input type="text" id="email" name="Nhập email của bạn" placeholder="VD:tòngcute123@gmail.com" required size="30"><br><br>
+        <!-- input là khung đẻ nhập vào -->
+         <label for="story">Mô tả cảm xúc của bạn</label>
+         <textarea name="story" id="story" placeholder="nói đi đừng ngại" rows="5" cols="50" spellcheck=""> </textarea><br><br>
+         <fieldset>
+            <legend>chọn giới tính</legend>
+            <label for="nam">Nam</label>
+            <input type="radio" id="nam" name="gender" value="nam" checked><br><br>
+            <label for="nu">Nữ</label>
+            <input type="radio" id="nu" name="gender" value="nu"><br><br>
+            <label for="other">Khác</label>
+            <input type="radio" id="other" name="gender" value="other"><br><br>     
+         </fieldset><br><br>
+        <label for="position"> bạn thích chơi vị trí nào</label>
+        <select name="position" id="position">
+            <option value="tiền đạo">Tiền đạo</option>
+            <option value="hậu vệ">Hậu vệ</option>
+            <option value="thủ môn">Thủ môn</option>
+            <option value="tiền vệ">Tiền vệ</option>
+        </select> <br><br>
+    <label for="agree">mức độ fan cuồng của bạn</label>
+         <input type="number"id="agree" name="fan cuồn"step="1" min="1" max="10" ><br><br>
+    <label for="timm"> cầu thủ yêu tích nhất</label>
+        <input type="text" id="timm" name="timm" list="ds-timm">
+        <datalist id="ds-timm"> 
+            <option value="Đoàn Văn Hậu">
+            <option value="Nguyễn Quang Hải">
+            <option value="Phan Văn Đức">
+            <option value="Trần Đình Trọng">
+            <option value="Nguyễn Tiến Linh">
+        </datalist><br><br>
+    <label for="subscribe">cam kết nha </label><br>
+    <input type="checkbox" id="subscribe" name="subscribe"> cam kết <br><br>
+    <button type="submit">gửi đơn</button><br>
+    <button type="reset">sóa ghi lại</button><br>
+
+    </form>
+</body>
+</html>
